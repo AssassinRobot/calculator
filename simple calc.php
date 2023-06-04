@@ -2,22 +2,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ماشین حساب</title>
+    <title>simple calculator</title>
   </head>
   <body>
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-      <label for="num1">عدد اول:</label>
+      <label for="num1">frist number:</label>
       <input type="text" id="num1" name="num1"><br><br>
-      <label for="num2">عدد دوم:</label>
+      <label for="num2">Second number:</label>
       <input type="text" id="num2" name="num2"><br><br>
-      <label for="operator">عملگر:</label>
+      <label for="operator">operator:</label>
       <select id="operator" name="operator">
-        <option value="+">جمع</option>
-        <option value="-">تفریق</option>
-        <option value="*">ضرب</option>
-        <option value="/">تقسیم</option>
+        <option value="+">sum</option>
+        <option value="-">minus</option>
+        <option value="*">multiplication</option>
+        <option value="/">Division</option>
       </select><br><br>
-      <input type="submit" value="محاسبه">
+      <input type="submit" value="calculation">
     </form>
 
     <?php
@@ -40,10 +40,10 @@
             $result = $num1 / $num2;
             break;
           default:
-            echo "عملگر نامعتبر";
+            echo "The operator is invalid";
         }
 
-        echo "<h2>نتیجه:</h2>";
+        echo "<h2>Result:</h2>";
         echo "<p>$num1 $operator $num2 = $result</p>";
       }
     ?>
